@@ -1,4 +1,6 @@
 def login(username, password):
-    if username == "admin" and password == "1234":
-        return "Login successful"
-    return "Login failed"
+    stored_hash = get_password_hash(username)
+    if verify_password(password, stored_hash):
+        return "Authenticated"
+    return "Authentication failed"
+    
