@@ -3,3 +3,4 @@ def login(username, password):
     if verify_password(password, stored_hash):
         return "Authenticated"
     return "Authentication failed"
+    
